@@ -1,6 +1,6 @@
 from classes.game import Game
 
-difficulty, num_layers, first_player = input("Select your difficulty, the number of layers, and who is going first "
+difficulty, num_layers, first_player = input("Select your difficulty (wimpy, easy, medium, or hard), the number of layers, and who is going first "
                                              "(1 for the player, 2 for the computer): ").split(",")
 
 first_player = int(first_player)
@@ -11,6 +11,7 @@ else:
     player_playing = False
 
 num_layers = int(num_layers)
+difficulty = difficulty.lower()
 game = Game(difficulty, num_layers)
 
 #print full board

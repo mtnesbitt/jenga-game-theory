@@ -2,7 +2,7 @@ class Tower:
 
     def __init__(self, num_layers):
         self.tower = [[0,1,2] for x in range(num_layers)]
-        self.last_move = [0,0]
+        self.last_move = []
 
     def is_valid(self, layer_num, block_num):
         # Checks if middle piece is left
