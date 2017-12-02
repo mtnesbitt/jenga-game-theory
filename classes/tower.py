@@ -24,11 +24,9 @@ class Tower:
         return False
 
     def remove_block(self, layer_num, block_num):
-        if not self.is_valid(layer_num, block_num):
-            return False
         self.tower[layer_num].remove(block_num)
-        self.last_move[layer_num, block_num]
-        return
+        self.last_move = [layer_num, block_num]
+
 
     def is_finished(self):
         for layer in self.tower:
@@ -39,9 +37,10 @@ class Tower:
                     return False
             elif len(layer) == 3:
                 return False
+        return True
 
     def get_last_move(self):
         return self.last_move
 
-    def __get_layers(self):
+    def get_layers(self):
         return self.tower

@@ -13,7 +13,7 @@ class TestTower(TestCase):
 
     def test_is_valid_non_existent_layer(self):
         t = Tower(3)
-        self.assertFalse(t.is_valid(4,0))
+        self.assertFalse(t.is_valid(4, 0))
 
     def test_remove_block_exception(self):
         t = Tower(3)
